@@ -42,10 +42,10 @@
                        />
             </StackLayout>
             <StackLayout>
-                <ic:IconEntry/>
+                <ic:IconEntry x:Name="tx1" HorizontalOptions="Center" WidthRequest="200" Placeholder=""  />
             </StackLayout>
             <StackLayout>
-                <ic:IconEntry/>
+                <ic:IconEntry x:Name="tx2" HorizontalOptions="Center"  WidthRequest="200"  Placeholder=""  IsPassword="True"  />
             </StackLayout>
             <StackLayout>
                 <Button/>
