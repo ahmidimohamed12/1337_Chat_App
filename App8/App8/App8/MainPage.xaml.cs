@@ -21,36 +21,12 @@ namespace App8
     public partial class MainPage : ContentPage
     {
        public FirebaseClient firebase = new FirebaseClient("https://project-655056407821009696.firebaseio.com/");
+       //FirebaseHelper firebaseHelper = new FirebaseHelper();
         public MainPage()
         {
             InitializeComponent();
-
         }
-        //public async List<Etudiant> etudiant()
-        //{
-
-        //    return (await firebase
-        //      .Child("Etudiant")
-        //      .OnceAsync<Etudiant>()).Select(item => new Etudiant
-        //      {
-        //          login = item.Object.login,
-        //          password = item.Object.password
-        //      }).ToArray();
-        //}
-        public async Task AddPerson(string login, string password)
-        {
-
-            await firebase
-              .Child("Etudiant")
-              .PostAsync(new Etudiant() { login = login, password = password });
-        }
-
-        private async void btn_click(object sender,EventArgs e)
-        {
-
-           await  AddPerson(tx1.Text,tx2.Text);
-
-        }
+      
     }
 }
 

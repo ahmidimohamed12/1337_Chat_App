@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.pageHome">
+  <!--Pages can be added as references or inline-->
+    <ContentPage  IconImageSource="" Title="Tab 1" >
+        <StackLayout>
+            <ListView HasUnevenRows="True" x:Name="ls1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage IconImageSource="" Title="Tab 2" >
+
+    </ContentPage>
+    <ContentPage IconImageSource="" Title="Tab 3" >
+        <StackLayout>
+            <StackLayout>
+                
+            </StackLayout>
+             <ListView>
+            
+            </ListView>
+        </StackLayout>
+       
+    </ContentPage>
+</TabbedPage>
