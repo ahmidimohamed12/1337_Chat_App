@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            IconImageSource="lg.png"
              mc:Ignorable="d"
              x:Class="App8.pageHome">
   <!--Pages can be added as references or inline-->
@@ -12,7 +13,21 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image 
+                                        Source="{Binding im}"
+                                        HorizontalOptions="Start"
+                                    />
+                                    <Label
+                                        Text="{Binding nom}"
+                                        HorizontalOptions="StartAndExpand"
+                                        />
+                                </StackLayout>
+                                <StackLayout BackgroundColor="White">
+                                    
+                                </StackLayout>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -20,7 +35,15 @@
         </StackLayout>
     </ContentPage>
     <ContentPage IconImageSource="" Title="Tab 2" >
-
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage>
     <ContentPage IconImageSource="" Title="Tab 3" >
         <StackLayout>
