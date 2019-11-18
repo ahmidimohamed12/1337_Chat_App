@@ -6,13 +6,16 @@
              xmlns:cm="clr-namespace:Jarvis.Components.Xamarin.Forms.AuxiliaryViews;assembly=Jarvis.Components.Xamarin.Forms"
              mc:Ignorable="d"
              BackgroundColor="White"
-            
+            xmlns:ic="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions"
              x:Class="App8.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
+        <BoxView
+            HeightRequest="30"
+            />
         <Grid>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"  />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -21,8 +24,35 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
+            <StackLayout Grid.Column="0"  HorizontalOptions="Start" Grid.Row="0">
+                <Image Source="" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="End" Grid.Column="1" Grid.Row="0">
+                <Image Source="" />
+            </StackLayout>
+            <StackLayout>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0">
+                <Label HorizontalOptions="Center"
+                       FontSize="48"
+                       FontAttributes="Bold"
+                       Text="1337"
+                       TextColor="Black"
+                       />
+            </StackLayout>
+            <StackLayout>
+                <ic:IconEntry/>
+            </StackLayout>
+            <StackLayout>
+                <ic:IconEntry/>
+            </StackLayout>
+            <StackLayout>
+                <Button/>
+            </StackLayout>
+            <StackLayout>
+                <Button/>
+            </StackLayout>
         </Grid>
     </StackLayout>
-
 </ContentPage>

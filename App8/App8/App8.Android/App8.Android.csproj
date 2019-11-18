@@ -56,6 +56,9 @@
     <PackageReference Include="Jarvis.Components.Xamarin.Forms">
       <Version>2.0.2.7</Version>
     </PackageReference>
+    <PackageReference Include="Xam.FormsPlugin.IconEntry">
+      <Version>1.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
@@ -88,14 +91,15 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\App8\App8.csproj">
       <Project>{109F6F1A-EDAC-4D79-A615-9C88BE7CB8A4}</Project>
       <Name>App8</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\uk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
