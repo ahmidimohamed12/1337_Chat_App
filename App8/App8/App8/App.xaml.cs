@@ -8,7 +8,7 @@ namespace App8
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Admin();
         }
 
         protected override void OnStart()
