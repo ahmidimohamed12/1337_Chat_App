@@ -7,7 +7,6 @@ namespace App8
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 
