@@ -20,7 +20,6 @@ namespace App8
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-       public FirebaseClient firebase = new FirebaseClient("https://project-655056407821009696.firebaseio.com/");
        //FirebaseHelper firebaseHelper = new FirebaseHelper();
         public MainPage()
         {
@@ -28,19 +27,71 @@ namespace App8
             bb.Clicked += btn_click;
         }
 
-        private async void btn_click(object sender,EventArgs e)
+        private async void btn_click(object sender, EventArgs e)
         {
-            string log = tx1.Text.ToLower();
-            string pas = tx2.Text.ToLower();
+            //string log = tx1.Text.ToLower();
+            //string pas = tx2.Text.ToLower();
 
-            Etudiant et = await DataHelp.get_etudiant(log,pas);
+            //var  s = DataHelp.get_etudiant(log,pas);
+            //et.login = s.Result.login;
 
-            if (log.Equals(et.login) && pas.Equals(et.password))
-            {
-                await Navigation.PushModalAsync(new pageHome());
-            }
+           var  etudiants = await DataHelp.getalletudiant();
+
+
+            await DisplayAlert("pk", etudiants.Count.ToString(), "", "ok");
+
+            //if (log.Equals(et.login) && pas.Equals(et.password))
+            //{
+            //    await Navigation.PushModalAsync(new pageHome());
+            //}
         }
+
+        private async void BtnAdd_Clicked(object sender, EventArgs e)
+        {
+            //await firebaseHelper.AddPerson(Convert.ToInt32(txtId.Text), txtName.Text);
+            //txtId.Text = string.Empty;
+            //txtName.Text = string.Empty;
+            //await DisplayAlert("Success", "Person Added Successfully", "OK");
+            //var allPersons = await firebaseHelper.GetAllPersons();
+            //lstPersons.ItemsSource = allPersons;
+        }
+
+        private async void BtnRetrive_Clicked(object sender, EventArgs e)
+        {
+            //var person = await firebaseHelper.GetPerson(Convert.ToInt32(txtId.Text));
+            //if (person != null)
+            //{
+            //    txtId.Text = person.PersonId.ToString();
+            //    txtName.Text = person.Name;
+            //    await DisplayAlert("Success", "Person Retrive Successfully", "OK");
+
+            //}
+            //else
+            //{
+            //    await DisplayAlert("Success", "No Person Available", "OK");
+            //}
+
+        }
+
+        private async void BtnUpdate_Clicked(object sender, EventArgs e)
+        {
+            //await firebaseHelper.UpdatePerson(Convert.ToInt32(txtId.Text), txtName.Text);
+            //txtId.Text = string.Empty;
+            //txtName.Text = string.Empty;
+            //await DisplayAlert("Success", "Person Updated Successfully", "OK");
+            //var allPersons = await firebaseHelper.GetAllPersons();
+            //lstPersons.ItemsSource = allPersons;
+        }
+
+        private async void BtnDelete_Clicked(object sender, EventArgs e)
+        {
+            //await firebaseHelper.DeletePerson(Convert.ToInt32(txtId.Text));
+            //await DisplayAlert("Success", "Person Deleted Successfully", "OK");
+            //var allPersons = await firebaseHelper.GetAllPersons();
+            //lstPersons.ItemsSource = allPersons;
+        
+        }
+}   
       
-    }
 }
 

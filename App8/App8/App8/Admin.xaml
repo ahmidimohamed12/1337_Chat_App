@@ -20,10 +20,10 @@
                 WidthRequest="200"
             />
 
-            <ic:IconEntry/>
-            <ic:IconEntry/>
+            <ic:IconEntry  x:Name="txt1" />
+            <ic:IconEntry x:Name="txt2" />
             <Button 
-                
+                x:Name="bt"
                 />
         </StackLayout>
     </ContentPage.Content>

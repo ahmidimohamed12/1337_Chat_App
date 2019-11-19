@@ -57,12 +57,11 @@
     <ContentPage IconImageSource="mnu.png"  >
         <StackLayout>
             <StackLayout>
-                
+
             </StackLayout>
-             <ListView>
-            
+            <ListView>
+
             </ListView>
         </StackLayout>
-       
     </ContentPage>
 </TabbedPage>

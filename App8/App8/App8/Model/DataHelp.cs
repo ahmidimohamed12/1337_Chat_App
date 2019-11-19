@@ -8,25 +8,26 @@ using Firebase.Database.Streaming;
 using Firebase.Database.Offline;
 using App8.Model;
 using Firebase.Database;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 namespace App8.Model
 {
     static class DataHelp
     {
-       public static FirebaseClient fb = new FirebaseClient("");
+       public static FirebaseClient fb = new FirebaseClient("https://project-655056407821009696.firebaseio.com/");
 
-        //public async List<Etudiant> etudiant()
-        //{
+        public static async Task<List<Etudiant>> getalletudiant()
+        {
 
-        //    return (await firebase
-        //      .Child("Etudiant")
-        //      .OnceAsync<Etudiant>()).Select(item => new Etudiant
-        //      {
-        //          login = item.Object.login,
-        //          password = item.Object.password
-        //      }).ToArray();
-        //}
+            return (await fb
+              .Child("Etudiant")
+              .OnceAsync<Etudiant>()).Select(item => new Etudiant
+              {
+                  login = item.Object.login,
+                  password = item.Object.password
+              }).ToList();
+        }
         public  static  async Task<Etudiant> get_etudiant(string lg, string pr)
         {
             
@@ -45,8 +46,8 @@ namespace App8.Model
               .Child("Etudiant")
               .PostAsync(new Etudiant()
               { 
-                  login = login.ToLower(),
-                  password=password.ToLower() 
+                  login = login.ToString(),
+                  password=password.ToString() 
               });
         }
     }

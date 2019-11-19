@@ -17,14 +17,12 @@ namespace App8
         public Admin()
         {
             InitializeComponent();
+            bt.Clicked += btn_click;
         }
       
-
         private async void btn_click(object sender, EventArgs e)
         {
-
-         //   await AddPerson(tx1.Text, tx2.Text);
-
+            await  DataHelp.AddPerson(txt1.Text, txt2.Text);
         }
     }
 }
