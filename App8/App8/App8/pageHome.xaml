@@ -2,12 +2,14 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            BackgroundColor="White"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             IconImageSource="lg.png"
              mc:Ignorable="d"
+            BarBackgroundColor="White"
              x:Class="App8.pageHome">
   <!--Pages can be added as references or inline-->
-    <ContentPage  IconImageSource="" Title="Tab 1" >
+    <ContentPage  IconImageSource="av2.png"  >
         <StackLayout>
             <ListView HasUnevenRows="True" x:Name="ls1">
                 <ListView.ItemTemplate>
@@ -34,18 +36,25 @@
             </ListView>
         </StackLayout>
     </ContentPage>
-    <ContentPage IconImageSource="" Title="Tab 2" >
+    <ContentPage IconImageSource=""  >
         <ListView>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        
+                        <StackLayout>
+                            <Image
+                                Source=""
+                                
+                                />
+                            <Label/>
+                            <Label/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </ContentPage>
-    <ContentPage IconImageSource="" Title="Tab 3" >
+    <ContentPage IconImageSource="mnu.png"  >
         <StackLayout>
             <StackLayout>
                 

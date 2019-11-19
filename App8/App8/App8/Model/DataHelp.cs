@@ -12,7 +12,7 @@ using Xamarin.Forms;
 using System.Threading.Tasks;
 namespace App8.Model
 {
-    class DataHelp
+    static class DataHelp
     {
        public static FirebaseClient fb = new FirebaseClient("");
 
@@ -27,7 +27,18 @@ namespace App8.Model
         //          password = item.Object.password
         //      }).ToArray();
         //}
-        public async Task AddPerson(string login, string password)
+        public  static  async Task<Etudiant> get_etudiant(string lg, string pr)
+        {
+            
+            return (await fb
+              .Child("Etudiant")
+              .OnceAsync<Etudiant>()).Select(item => new Etudiant
+              {
+                  login = lg,
+                  password = pr
+              }).Single();
+        }
+        public static async Task AddPerson(string login, string password)
         {
 
             await fb

@@ -25,6 +25,20 @@ namespace App8
         public MainPage()
         {
             InitializeComponent();
+            bb.Clicked += btn_click;
+        }
+
+        private async void btn_click(object sender,EventArgs e)
+        {
+            string log = tx1.Text.ToLower();
+            string pas = tx2.Text.ToLower();
+
+            Etudiant et = await DataHelp.get_etudiant(log,pas);
+
+            if (log.Equals(et.login) && pas.Equals(et.password))
+            {
+                await Navigation.PushModalAsync(new pageHome());
+            }
         }
       
     }
