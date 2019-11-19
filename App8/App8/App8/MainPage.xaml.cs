@@ -29,21 +29,15 @@ namespace App8
 
         private async void btn_click(object sender, EventArgs e)
         {
-            //string log = tx1.Text.ToLower();
-            //string pas = tx2.Text.ToLower();
+            string log = tx1.Text.ToLower();
+            string pas = tx2.Text.ToLower();
 
-            //var  s = DataHelp.get_etudiant(log,pas);
-            //et.login = s.Result.login;
-
-           var  etudiants = await DataHelp.getalletudiant();
+            var  etudiants = await DataHelp.get_etudiant(log,pas);
 
 
-            await DisplayAlert("pk", etudiants.Count.ToString(), "", "ok");
+            await DisplayAlert("pk", etudiants.login.ToString(), "", "ok");
 
-            //if (log.Equals(et.login) && pas.Equals(et.password))
-            //{
-            //    await Navigation.PushModalAsync(new pageHome());
-            //}
+          
         }
 
         private async void BtnAdd_Clicked(object sender, EventArgs e)

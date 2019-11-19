@@ -15,7 +15,6 @@ namespace App8
                 MainPage = new MainPage();
             else
                 MainPage = new Connection();
-
         }
 
         protected override void OnStart()
