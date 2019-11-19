@@ -20,24 +20,59 @@ namespace App8
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-       //FirebaseHelper firebaseHelper = new FirebaseHelper();
+        //FirebaseHelper firebaseHelper = new FirebaseHelper();
+
+        public int imtappedfr = 0;
+
         public MainPage()
         {
             InitializeComponent();
             bb.Clicked += btn_click;
+            Guest_click(iml, im_click);
+
+        }
+
+        private  void Guest_click(Image im ,EventHandler e)
+        {
+            var n = new TapGestureRecognizer();
+            n.Tapped += e;
+             im.GestureRecognizers.Add(n);
+        }
+
+        private void im_click(object sender,EventArgs e)
+        {
+            imtappedfr++;
+           if (imtappedfr % 2 == 0)
+            {
+                iml.Source = ImageSource.FromFile("fr.png");
+            }
+            else
+            {
+                iml.Source = ImageSource.FromFile("morocco.png");
+            }
+           
+
         }
 
         private async void btn_click(object sender, EventArgs e)
         {
-            string log = tx1.Text.ToLower();
-            string pas = tx2.Text.ToLower();
+            try
+            {
 
-            var  etudiants = await DataHelp.get_etudiant(log,pas);
-
-
-            await DisplayAlert("pk", etudiants.login.ToString(), "", "ok");
-
-          
+                string log = tx1.Text.ToLower();
+                string pas = tx2.Text.ToLower();
+                var etudiants = await DataHelp.getalletudiant();
+                var etu = (from a in etudiants
+                           where a.login == log && a.password == pas
+                           select a).FirstOrDefault();
+                await DisplayAlert(etu.password, "ok", "ok");
+                if (etu.password.Equals(pas))
+                  await Navigation.PushModalAsync(new pageHome());
+            }
+            catch(Exception)
+            {
+                await DisplayAlert("ok","ok","ok");
+            }
         }
 
         private async void BtnAdd_Clicked(object sender, EventArgs e)

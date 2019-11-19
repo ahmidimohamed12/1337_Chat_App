@@ -8,18 +8,17 @@
              BackgroundColor="White"
             xmlns:ic="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions"
              x:Class="App8.MainPage">
-
     <StackLayout>
         <BoxView
             HeightRequest="10"
             />
         <StackLayout Orientation="Horizontal">
             <Image Source="" HorizontalOptions="Start" />
-            <Image Source="uk.png" 
+            <Image Source="fr.png" 
                    WidthRequest="25"
+                    x:Name="iml"
                    HorizontalOptions="End"/>
         </StackLayout>
-
         <BoxView
             HeightRequest="20"
             />
@@ -46,15 +45,26 @@
                            WidthRequest="200"  
                            IsPassword="True" 
                            HeightRequest="60"
+                          Icon="lock.png"
                            PlaceholderColor="Black"
                            />
         </StackLayout>
+        <BoxView
+            HeightRequest="30"
+            />
         <Button x:Name="bb"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                BackgroundColor="Black"
+                />
+        <Button x:Name="btnr"
                 TextColor="Black"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 WidthRequest="150"
-                />
-      
+                BackgroundColor="Black"
+            />
     </StackLayout>
 </ContentPage>
