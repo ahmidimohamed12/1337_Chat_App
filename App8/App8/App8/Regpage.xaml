@@ -5,19 +5,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
                xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
- 
+            xmlns:ll="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              BackgroundColor="White"
              xmlns:cn="clr-namespace:Flex.Controls;assembly=Flex"
              x:Class="App8.Regpage">
     <ContentPage.Content>
         <StackLayout>
-            <Label
+            <StackLayout>
+                <ll:AnimationView
+                    Animation=""
+                    HorizontalOptions="Start"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    AutoPlay="True"
+                    Loop="True"
+                    
+                    
+                    />
+                <Label
                 HorizontalOptions="Center"
                 Text="Registration"
                 FontAttributes="Bold"
                 TextColor="Black"
                 FontSize="40"
                 />
+            </StackLayout>
+           
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -35,7 +48,8 @@
                     <Label/>
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="200"
                         />
                 </StackLayout>
                 <StackLayout 
@@ -50,8 +64,9 @@
                         />
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="CenterAndExpand"
                         CornerRadius="25"
+                        WidthRequest="200"
                         />
                 </StackLayout>
                 <StackLayout 
@@ -64,9 +79,10 @@
                         FontAttributes="Bold"
                         />
                     <CustomEntry:RoundedBorderEntry
-                        HorizontalOptions="Center"
+                        HorizontalOptions="CenterAndExpand"
                         BorderColor="Black"
                         CornerRadius="25"
+                        WidthRequest="200"
                         />
                 </StackLayout>
                 
