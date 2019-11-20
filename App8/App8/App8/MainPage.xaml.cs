@@ -28,30 +28,18 @@ namespace App8
         {
             InitializeComponent();
             bb.Clicked += btn_click;
-            Guest_click(iml, im_click);
+        
+            tx1.Text = "Login";
+            tx2.Text = "Password";
         }
 
-        private  void Guest_click(Image im ,EventHandler e)
+      
+
+        private void text_changed(object sender,EventArgs e)
         {
-            var n = new TapGestureRecognizer();
-            n.Tapped += e;
-             im.GestureRecognizers.Add(n);
+            tx2.IsPassword = true;
         }
-
-        private void im_click(object sender,EventArgs e)
-        {
-            imtappedfr++;
-           if (imtappedfr % 2 == 0)
-            {
-                iml.Source = ImageSource.FromFile("fr.png");
-            }
-            else
-            {
-                iml.Source = ImageSource.FromFile("morocco.png");
-            }
-           
-
-        }
+      
 
         private async void btn_click(object sender, EventArgs e)
         {

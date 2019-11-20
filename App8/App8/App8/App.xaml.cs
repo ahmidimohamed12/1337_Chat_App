@@ -14,11 +14,9 @@ namespace App8
         {
             InitializeComponent();
             var r = Plugin.Connectivity.CrossConnectivity.Current;
-
             var s = Plugin.DeviceInfo.CrossDeviceInfo.Current;
-           
             if (r.IsConnected)
-                MainPage = new MainPage();
+                MainPage = new Registration();
             else
                 MainPage = new Connection();
         }

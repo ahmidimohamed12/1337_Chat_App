@@ -13,15 +13,9 @@
         <BoxView
             HeightRequest="10"
             />
-        <StackLayout Orientation="Horizontal">
-            <Image Source="" HorizontalOptions="Start" />
-            <Image Source="fr.png" 
-                   WidthRequest="25"
-                    x:Name="iml"
-                   HorizontalOptions="End"/>
-        </StackLayout>
+       
         <BoxView
-            HeightRequest="20"
+            HeightRequest="25"
             />
 
         <Image
@@ -34,19 +28,25 @@
             />
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
             <CustomEntry:RoundedBorderEntry
-                Placeholder="y"
                 x:Name="tx1"
                 WidthRequest="200"
                 BorderColor="Black"
+                HorizontalOptions="Center"
+                HeightRequest="60"
+                PlaceholderColor="Black"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
                 />
 
-            <ic:IconEntry x:Name="tx2" 
-                           HorizontalOptions="Center"  
-                           WidthRequest="200"  
-                           IsPassword="True" 
-                           HeightRequest="60"
-                          Icon="lock.png"
-                           PlaceholderColor="Black"
+            <CustomEntry:RoundedBorderEntry
+                x:Name="tx2" 
+                HorizontalOptions="Center"  
+                WidthRequest="200"  
+                BorderColor="Black"
+                HeightRequest="60"
+                FontAttributes="Bold"
+                PlaceholderColor="Black"
+                HorizontalTextAlignment="Center"
                            />
         </StackLayout>
         <BoxView

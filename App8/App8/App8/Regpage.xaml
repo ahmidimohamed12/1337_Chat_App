@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+               xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
+ 
+             BackgroundColor="White"
+             xmlns:cn="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="App8.Regpage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="Center"
+                Text="Registration"
+                FontAttributes="Bold"
+                TextColor="Black"
+                FontSize="40"
+                />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Grid.Column="0" 
+                    Grid.Row="0" >
+                    <Label/>
+                    <CustomEntry:RoundedBorderEntry
+                        BorderColor="Black"
+                        HorizontalOptions="Center"
+                        />
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Grid.Column="0" 
+                    Grid.Row="1" >
+                    
+                    <Label
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        Text="hhhhh"
+                        />
+                    <CustomEntry:RoundedBorderEntry
+                        BorderColor="Black"
+                        HorizontalOptions="Center"
+                        CornerRadius="25"
+                        />
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Grid.Column="0" 
+                    Grid.Row="2" >
+                    <Label
+                        Text="hshs"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        />
+                    <CustomEntry:RoundedBorderEntry
+                        HorizontalOptions="Center"
+                        BorderColor="Black"
+                        CornerRadius="25"
+                        />
+                </StackLayout>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

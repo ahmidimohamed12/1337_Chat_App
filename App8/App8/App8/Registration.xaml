@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             xmlns:fl ="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="App8.Registration">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView
+                HeightRequest="15"
+                />
+            <StackLayout Orientation="Horizontal">
+                <Image Source="" HorizontalOptions="Start" />
+                <Image Source="fr.png" 
+                   WidthRequest="25"
+                    x:Name="iml"
+                   HorizontalOptions="End"/>
+            </StackLayout>
+            <BoxView
+                HeightRequest="20"
+                />
+            <Image
+                Source="lg.png"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="200"
+                />
+            <BoxView
+                HeightRequest="30"
+                />
+            <fl:FlexButton
+                BackgroundColor="Black"
+                HorizontalOptions="Center"
+                WidthRequest="240"
+                HeightRequest="65"
+                ForegroundColor="White"
+                FontAttributes="Bold"
+                Text="Login"
+                CornerRadius="25"
+                    x:Name="btnlg"
+                HighlightForegroundColor="Black"
+                />
+            <BoxView
+                HeightRequest="20"
+                />
+            <fl:FlexButton
+                BackgroundColor="Black"
+                HorizontalOptions="Center"
+                WidthRequest="240"
+                HeightRequest="65"
+                ForegroundColor="White"
+                FontAttributes="Bold"
+                Text="Registration"
+                x:Name="btnreg"
+                CornerRadius="25"
+                HighlightForegroundColor="Black"
+                />  
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
