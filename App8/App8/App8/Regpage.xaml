@@ -75,6 +75,7 @@
                         CornerRadius="25"
                         WidthRequest="200"
                         HorizontalTextAlignment="Center"
+                        Placeholder="Password"
                         />
                 </StackLayout>
                 <StackLayout 
@@ -86,6 +87,7 @@
                         BorderColor="Black"
                         CornerRadius="25"
                         WidthRequest="200"
+                        Placeholder="New Password"
                         HorizontalTextAlignment="Center"
                         />
                 </StackLayout>
