@@ -41,6 +41,9 @@
                     TextColor="Black"
                     x:Name="tx"
                     />
+            <BoxView
+                HeightRequest="15"
+                />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -50,50 +53,47 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <StackLayout 
-                    Orientation="Horizontal"
-                    Grid.Column="0" 
-                    HorizontalOptions="Center"
-                    Grid.Row="0" >
-                    <CustomEntry:RoundedBorderEntry
+
+
+                <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
                         CornerRadius="25"
-                        HorizontalOptions="Center"
                         WidthRequest="200"
-                        Placeholder="Login"
+                    HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
+                        Placeholder="Login"
+                    Grid.Column="0"
+                    Grid.Row="1"
                         />
-                </StackLayout>
-                <StackLayout 
-                    Orientation="Horizontal"
-                    Grid.Column="0" 
-                    HorizontalOptions="Center"
-                    Grid.Row="1" >
-                    <CustomEntry:RoundedBorderEntry
+
+                <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
                         CornerRadius="25"
                         WidthRequest="200"
+                      HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
                         Placeholder="Password"
+                    Grid.Column="0"
+                    Grid.Row="2"
                         />
-                </StackLayout>
-                <StackLayout 
-                    Orientation="Horizontal"
-                    Grid.Column="0" 
-                    HorizontalOptions="Center"
-                    Grid.Row="2" >
-                    <CustomEntry:RoundedBorderEntry
+                <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
                         CornerRadius="25"
                         WidthRequest="200"
+                      HorizontalOptions="Center"
                         Placeholder="New Password"
                         HorizontalTextAlignment="Center"
-                        />
-                </StackLayout>
-                <fl:FlexButton
                     Grid.Column="0"
                     Grid.Row="3"
+                        />
+                <BoxView
+                    HeightRequest="20"
+                    />
+                <fl:FlexButton
+                    Grid.Column="0"
+                    Grid.Row="4"
                     Text="INSCRIPTION"
                     HorizontalOptions="Center"
                     BackgroundColor="Black"

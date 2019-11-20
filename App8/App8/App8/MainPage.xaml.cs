@@ -29,19 +29,11 @@ namespace App8
             InitializeComponent();
             bb.Clicked += btn_click;
         
-            tx1.Text = "Login";
-            tx2.Text = "Password";
-        }
-
-      
-
-        private void text_changed(object sender,EventArgs e)
-        {
-            tx2.IsPassword = true;
+            tx1.Placeholder = "Login";
+            tx2.Placeholder = "Password";
         }
       
-
-        private async void btn_click(object sender, EventArgs e)
+       private async void btn_click(object sender, EventArgs e)
         {
             try
             {
@@ -53,8 +45,8 @@ namespace App8
                            where a.login == log && a.password == pas
                            select a).FirstOrDefault();
                 await DisplayAlert(etu.password, "ok", "ok");
-                if (etu.password.Equals(pas))
-                  await Navigation.PushModalAsync(new pageHome());
+                //if (etu.password.Equals(pas))
+                 // await Navigation.PushModalAsync(new pageHome());
             }
             catch(Exception)
             {

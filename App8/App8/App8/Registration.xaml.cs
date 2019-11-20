@@ -12,13 +12,21 @@ namespace App8
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registration : ContentPage
     {
-        public int imtappedfr;
+        public int imtappedfr = 0;
+
+        public static int m = 0;
         public Registration()
         {
             InitializeComponent();
             Guest_click(iml, im_click);
 
             btnreg.Clicked += reg;
+            btnlg.Clicked += click_con;
+        }
+
+        private async void click_con(object sende,EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MainPage());
         }
         private async void reg(object sender,EventArgs e)
         {
@@ -37,10 +45,12 @@ namespace App8
             if (imtappedfr % 2 == 0)
             {
                 iml.Source = ImageSource.FromFile("fr.png");
+                m = 1;
           
             }
             else
             {
+                m = 2;
                 iml.Source = ImageSource.FromFile("morocco.png");
             }
 

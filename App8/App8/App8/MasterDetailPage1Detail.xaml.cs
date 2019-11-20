@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace App8
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class pageHome : TabbedPage
+    public partial class MasterDetailPage1Detail : ContentPage
     {
-        public pageHome()
+        public MasterDetailPage1Detail()
         {
             InitializeComponent();
         }
