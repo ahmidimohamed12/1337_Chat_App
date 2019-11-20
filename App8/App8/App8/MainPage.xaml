@@ -35,7 +35,7 @@
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
             <CustomEntry:RoundedBorderEntry
                 Placeholder="y"
-                x:Name="txt1"
+                x:Name="tx1"
                 WidthRequest="200"
                 BorderColor="Black"
                 />
