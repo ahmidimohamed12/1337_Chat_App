@@ -12,69 +12,94 @@
              x:Class="App8.Regpage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
+            <StackLayout Orientation="Horizontal">
                 <ll:AnimationView
-                    Animation=""
+                    Animation="bck.json"
                     HorizontalOptions="Start"
-                    WidthRequest="40"
-                    HeightRequest="40"
+                    WidthRequest="80"
+                    HeightRequest="80"
                     AutoPlay="True"
                     Loop="True"
+                    x:Name="btnback"
                     
                     />
-          
+                <ll:AnimationView
+                    Animation="inf.json"
+                    HorizontalOptions="EndAndExpand"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    AutoPlay="True"
+                    Loop="True"
+                    x:Name="inf"
+                    />
             </StackLayout>
-           
+            <Label
+                    Text="Registartion"
+                    FontAttributes="Bold"
+                    FontSize="40"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    x:Name="tx"
+                    />
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackLayout 
                     Orientation="Horizontal"
                     Grid.Column="0" 
+                    HorizontalOptions="Center"
                     Grid.Row="0" >
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
-                        HorizontalOptions="CenterAndExpand"
+                        CornerRadius="25"
+                        HorizontalOptions="Center"
                         WidthRequest="200"
+                        Placeholder="Login"
+                        HorizontalTextAlignment="Center"
                         />
                 </StackLayout>
                 <StackLayout 
                     Orientation="Horizontal"
                     Grid.Column="0" 
+                    HorizontalOptions="Center"
                     Grid.Row="1" >
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
-                        HorizontalOptions="CenterAndExpand"
                         CornerRadius="25"
                         WidthRequest="200"
+                        HorizontalTextAlignment="Center"
                         />
                 </StackLayout>
                 <StackLayout 
                     Orientation="Horizontal"
                     Grid.Column="0" 
+                    HorizontalOptions="Center"
                     Grid.Row="2" >
-                   
                     <CustomEntry:RoundedBorderEntry
-                        HorizontalOptions="CenterAndExpand"
                         BorderColor="Black"
                         CornerRadius="25"
                         WidthRequest="200"
+                        HorizontalTextAlignment="Center"
                         />
                 </StackLayout>
                 <fl:FlexButton
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="INSCRIPTION"
                     HorizontalOptions="Center"
                     BackgroundColor="Black"
                     ForegroundColor="White"
                     HighlightBackgroundColor="White"
                     HighlightForegroundColor="Black"
                     WidthRequest="200"
+                    FontAttributes="Bold"
                     />
             </Grid>
         </StackLayout>

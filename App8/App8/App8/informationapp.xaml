@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:lt="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             BackgroundColor="White"
+             x:Class="App8.informationapp">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <lt:AnimationView
+                    Animation="bck.json"
+                    HorizontalOptions="Start"
+                    Loop="True"
+                    AutoPlay="True"
+                    x:Name="lt"
+                    WidthRequest="80"
+                    HeightRequest="80"
+                    />
+            </StackLayout>
+            <Label
+                
+                Text="info"
+                TextColor="Black"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

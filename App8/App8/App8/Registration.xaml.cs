@@ -17,6 +17,12 @@ namespace App8
         {
             InitializeComponent();
             Guest_click(iml, im_click);
+
+            btnreg.Clicked += reg;
+        }
+        private async void reg(object sender,EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Regpage());
         }
         private void Guest_click(Image im, EventHandler e)
         {

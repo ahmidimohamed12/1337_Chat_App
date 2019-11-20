@@ -94,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\cnx.json" />
+    <AndroidAsset Include="Assets\bck.json" />
+    <AndroidAsset Include="Assets\info.json" />
+    <AndroidAsset Include="Assets\inf.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

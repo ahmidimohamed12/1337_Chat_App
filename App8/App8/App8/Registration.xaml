@@ -52,7 +52,7 @@
                 HeightRequest="65"
                 ForegroundColor="White"
                 FontAttributes="Bold"
-                Text="Registration"
+                Text="INSCRIPTION"
                 x:Name="btnreg"
                 CornerRadius="25"
                 HighlightForegroundColor="Black"

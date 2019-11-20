@@ -15,6 +15,22 @@ namespace App8
         public Regpage()
         {
             InitializeComponent();
+            var n = new TapGestureRecognizer();
+            n.Tapped += btnback_click;
+            btnback.GestureRecognizers.Add(n);
+
+            var nn = new TapGestureRecognizer();
+            nn.Tapped += info_click;
+            inf.GestureRecognizers.Add(nn);
+        }
+        private async void btnback_click(object sender,EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Registration());
+        }
+
+        private async void info_click(object sender,EventArgs e)
+        {
+            await Navigation.PushModalAsync(new informationapp());
         }
     }
 }
