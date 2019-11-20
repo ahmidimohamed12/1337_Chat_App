@@ -6,6 +6,7 @@
              xmlns:cm="clr-namespace:Jarvis.Components.Xamarin.Forms.AuxiliaryViews;assembly=Jarvis.Components.Xamarin.Forms"
              mc:Ignorable="d"
              BackgroundColor="White"
+              xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
             xmlns:ic="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions"
              x:Class="App8.MainPage">
     <StackLayout>
@@ -32,13 +33,12 @@
             HeightRequest="20"
             />
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
-            <ic:IconEntry x:Name="tx1"  
-                          HorizontalOptions="Center" 
-                          WidthRequest="200" 
-                          HeightRequest="60"
-                          Icon="usr.png" 
-                          PlaceholderColor="Black"
-                          />
+            <CustomEntry:RoundedBorderEntry
+                Placeholder="y"
+                x:Name="txt1"
+                WidthRequest="200"
+                BorderColor="Black"
+                />
 
             <ic:IconEntry x:Name="tx2" 
                            HorizontalOptions="Center"  

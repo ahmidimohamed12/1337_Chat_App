@@ -29,7 +29,6 @@ namespace App8
             InitializeComponent();
             bb.Clicked += btn_click;
             Guest_click(iml, im_click);
-
         }
 
         private  void Guest_click(Image im ,EventHandler e)

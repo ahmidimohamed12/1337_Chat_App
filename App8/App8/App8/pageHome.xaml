@@ -56,8 +56,10 @@
     </ContentPage>
     <ContentPage IconImageSource="mnu.png"  >
         <StackLayout>
-            <StackLayout>
-
+            <StackLayout Orientation="Horizontal">
+                <Image/>
+                <Entry/>
+                <Image/>
             </StackLayout>
             <ListView>
 
