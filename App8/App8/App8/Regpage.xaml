@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:fl="clr-namespace:Flex.Controls;assembly=Flex"
                xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
             xmlns:ll="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              BackgroundColor="White"
@@ -20,15 +21,8 @@
                     AutoPlay="True"
                     Loop="True"
                     
-                    
                     />
-                <Label
-                HorizontalOptions="Center"
-                Text="Registration"
-                FontAttributes="Bold"
-                TextColor="Black"
-                FontSize="40"
-                />
+          
             </StackLayout>
            
             <Grid>
@@ -45,7 +39,6 @@
                     Orientation="Horizontal"
                     Grid.Column="0" 
                     Grid.Row="0" >
-                    <Label/>
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
                         HorizontalOptions="CenterAndExpand"
@@ -56,12 +49,6 @@
                     Orientation="Horizontal"
                     Grid.Column="0" 
                     Grid.Row="1" >
-                    
-                    <Label
-                        TextColor="Black"
-                        FontAttributes="Bold"
-                        Text="hhhhh"
-                        />
                     <CustomEntry:RoundedBorderEntry
                         BorderColor="Black"
                         HorizontalOptions="CenterAndExpand"
@@ -73,11 +60,7 @@
                     Orientation="Horizontal"
                     Grid.Column="0" 
                     Grid.Row="2" >
-                    <Label
-                        Text="hshs"
-                        TextColor="Black"
-                        FontAttributes="Bold"
-                        />
+                   
                     <CustomEntry:RoundedBorderEntry
                         HorizontalOptions="CenterAndExpand"
                         BorderColor="Black"
@@ -85,7 +68,14 @@
                         WidthRequest="200"
                         />
                 </StackLayout>
-                
+                <fl:FlexButton
+                    HorizontalOptions="Center"
+                    BackgroundColor="Black"
+                    ForegroundColor="White"
+                    HighlightBackgroundColor="White"
+                    HighlightForegroundColor="Black"
+                    WidthRequest="200"
+                    />
             </Grid>
         </StackLayout>
     </ContentPage.Content>
